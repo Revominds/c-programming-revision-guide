@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C Programming</title>
+  <link rel="icon" href="./images/C++.png">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="top-banner">
+      <div class="badge">🔥 Complete C Programming Revision Guide</div>
+
+      <h1 class="main-title">
+        Master Your <span>C Programming</span> Practical Exams
+      </h1>
+
+      <p class="subtitle">
+        A modern interactive study guide covering the five most important practical C programming examination topics:
+        decision making, structures, file handling, pointers, recursion, validation, menus, and complete program design.
+        Built to help you understand what the examiner actually expects in practical coding exams.
+      </p>
+
+      <div class="stats">
+        <div class="stat-box">
+          <h3>5</h3>
+          <p>Core Exam Topics</p>
+        </div>
+
+        <div class="stat-box">
+          <h3>25+</h3>
+          <p>Important Concepts</p>
+        </div>
+
+        <div class="stat-box">
+          <h3>40+</h3>
+          <p>Exam Areas Covered</p>
+        </div>
+
+        <div class="stat-box">
+          <h3>100%</h3>
+          <p>Practical Focused</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav">
+      <button class="nav-btn active" onclick="show(0)">Comparing Integers</button>
+      <button class="nav-btn" onclick="show(1)">Student Grading</button>
+      <button class="nav-btn" onclick="show(2)">Employee Management</button>
+      <button class="nav-btn" onclick="show(3)">Banking System</button>
+      <button class="nav-btn" onclick="show(4)">Functions & Pointers</button>
+    </div>
+
+    <!-- TOPIC 1 -->
+    <div id="t0" class="topic visible">
+
+      <div class="hero">
+        <div class="hero-label">Topic 1 • Input, Output & Control Flow</div>
+        <div class="hero-title">Comparing Integers Program</div>
+        <div class="hero-desc">
+          Learn how to build a complete interactive program using user input, decision making,
+          validation, functions, and loops. This topic forms the foundation of all practical C
+          programming questions.
+        </div>
+        <!-- ========================================= -->
+        <!-- TOPIC 1 CODE -->
+        <!-- ========================================= -->
+
+        <div class="code-section">
+
+          <div class="code-header">
+            <span>📄 comparing_integers.c</span>
+            <button class="copy-btn" onclick="copyCode('code1')">Copy Source</button>
+          </div>
+
+          <div class="code-block">
+            <pre><code id="code1">
+<span class="comment">// Comparing Integers Program</span>
+
+<span class="keyword">#include</span> &lt;stdio.h&gt;
+
+<span class="keyword">void</span> <span class="func">compareNumbers</span>(<span class="keyword">int</span> a, <span class="keyword">int</span> b)
+{
+    <span class="keyword">if</span>(a &gt; b)
+    {
+        printf(<span class="string">"A is greater than B\n"</span>);
+    }
+    <span class="keyword">else if</span>(b &gt; a)
+    {
+        printf(<span class="string">"B is greater than A\n"</span>);
+    }
+    <span class="keyword">else</span>
+    {
+        printf(<span class="string">"Both numbers are equal\n"</span>);
+    }
+}
+
+<span class="keyword">int</span> <span class="func">main</span>()
+{
+    <span class="keyword">int</span> a, b, choice;
+
+    <span class="keyword">do</span>
+    {
+        printf(<span class="string">"\n=== Comparing Integers ===\n"</span>);
+
+        printf(<span class="string">"Enter first integer: "</span>);
+        <span class="keyword">if</span>(scanf(<span class="string">"%d"</span>, &amp;a) != <span class="num">1</span>)
+        {
+            printf(<span class="string">"Invalid input!\n"</span>);
+            <span class="keyword">return</span> <span class="num">1</span>;
+        }
+
+        printf(<span class="string">"Enter second integer: "</span>);
+        scanf(<span class="string">"%d"</span>, &amp;b);
+
+        compareNumbers(a, b);
+
+        printf(<span class="string">"\n1. Continue\n0. Exit\n"</span>);
+        printf(<span class="string">"Choice: "</span>);
+        scanf(<span class="string">"%d"</span>, &amp;choice);
+
+    } <span class="keyword">while</span>(choice != <span class="num">0</span>);
+
+    <span class="keyword">return</span> <span class="num">0</span>;
+}
+</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="what-card">
+        <strong>Examiner Focus:</strong>
+        The examiner wants to confirm that you can create a complete working C application —
+        not just isolated code snippets. Your program should accept user input, validate it,
+        make decisions correctly, handle errors, and repeat operations using loops.
+      </div>
+
+      <div class="grid2">
+
+        <div class="card">
+          <div class="card-label">Key Areas To Master</div>
+
+          <div class="tag-list">
+            <span class="tag tag-blue">scanf()</span>
+            <span class="tag tag-blue">printf()</span>
+            <span class="tag tag-blue">if-else</span>
+            <span class="tag tag-blue">loops</span>
+            <span class="tag tag-blue">validation</span>
+            <span class="tag tag-blue">functions</span>
+            <span class="tag tag-blue">menus</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-label">Practical Tasks</div>
+
+          <ul class="fn-list">
+            <li><span class="check">✓</span>Accept integers using <code>scanf()</code></li>
+            <li><span class="check">✓</span>Compare numbers with if-else statements</li>
+            <li><span class="check">✓</span>Validate invalid or non-numeric input</li>
+            <li><span class="check">✓</span>Create menu systems using loops</li>
+            <li><span class="check">✓</span>Use functions to organize logic</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="card">
+        <div class="card-label">Important Theory Areas</div>
+
+        <div class="theory-item">
+          <div class="theory-dot dot-blue"></div>
+          <div>
+            <strong>Flowcharts:</strong>
+            Understand start/end symbols, input/output symbols, and decision diamonds.
+          </div>
+        </div>
+
+        <div class="theory-item">
+          <div class="theory-dot dot-blue"></div>
+          <div>
+            <strong>scanf() Return Values:</strong>
+            Always check if input was successful before processing values.
+          </div>
+        </div>
+
+        <div class="theory-item">
+          <div class="theory-dot dot-blue"></div>
+          <div>
+            <strong>Loop Types:</strong>
+            <code>while</code> checks before execution while
+            <code>do-while</code> guarantees one execution.
+          </div>
+        </div>
+
+        <div class="study-tip">
+          <h4>💡 Exam Tip</h4>
+          <p>
+            Most students lose marks because of poor validation. Always validate input and include
+            an option to exit the menu safely.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TOPIC 2 -->
+    <div id="t1" class="topic">
+
+      <div class="hero">
+        <div class="hero-label">Topic 2 • Structures & Arrays</div>
+        <div class="hero-title">Student Grading System</div>
+        <div class="hero-desc">
+          Learn how to organize student records using structures and arrays while calculating
+          grades, averages, and generating reports.
+        </div>
+
+        <!-- ========================================= -->
+        <!-- TOPIC 2 CODE -->
+        <!-- ========================================= -->
+
+        <div class="code-section">
+
+          <div class="code-header">
+            <span>📄 student_grading_system.c</span>
+            <button class="copy-btn" onclick="copyCode('code2')">Copy Source</button>
+          </div>
+
+          <div class="code-block">
+            <pre><code id="code2">
+<span class="comment">// Student Grading System</span>
+
+<span class="keyword">#include</span> &lt;stdio.h&gt;
+
+<span class="keyword">struct</span> Student
+{
+    <span class="keyword">char</span> name[50];
+    <span class="keyword">float</span> score;
+    <span class="keyword">char</span> grade;
+};
+
+<span class="keyword">char</span> <span class="func">calculateGrade</span>(<span class="keyword">float</span> score)
+{
+    <span class="keyword">if</span>(score &gt;= <span class="num">80</span>)
+        <span class="keyword">return</span> 'A';
+    <span class="keyword">else if</span>(score &gt;= <span class="num">70</span>)
+        <span class="keyword">return</span> 'B';
+    <span class="keyword">else if</span>(score &gt;= <span class="num">60</span>)
+        <span class="keyword">return</span> 'C';
+    <span class="keyword">else if</span>(score &gt;= <span class="num">50</span>)
+        <span class="keyword">return</span> 'D';
+
+    <span class="keyword">return</span> 'F';
+}
+
+<span class="keyword">int</span> <span class="func">main</span>()
+{
+    <span class="keyword">struct</span> Student s[3];
+    <span class="keyword">int</span> i;
+
+    <span class="keyword">for</span>(i = <span class="num">0</span>; i &lt; <span class="num">3</span>; i++)
+    {
+        printf(<span class="string">"\nEnter student name: "</span>);
+        scanf(<span class="string">"%s"</span>, s[i].name);
+
+        printf(<span class="string">"Enter score: "</span>);
+        scanf(<span class="string">"%f"</span>, &amp;s[i].score);
+
+        s[i].grade = calculateGrade(s[i].score);
+    }
+
+    printf(<span class="string">"\n=== Student Report ===\n"</span>);
+
+    <span class="keyword">for</span>(i = <span class="num">0</span>; i &lt; <span class="num">3</span>; i++)
+    {
+        printf(<span class="string">"%s - %.2f - Grade %c\n"</span>,
+        s[i].name,
+        s[i].score,
+        s[i].grade);
+    }
+
+    <span class="keyword">return</span> <span class="num">0</span>;
+}
+</code></pre>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="what-card">
+        <strong>Examiner Focus:</strong>
+        The examiner wants to test whether you understand how to manage related data using
+        structures rather than scattered variables.
+      </div>
+
+      <div class="grid2">
+
+        <div class="card">
+          <div class="card-label">Core Topics</div>
+
+          <div class="tag-list">
+            <span class="tag tag-green">structures</span>
+            <span class="tag tag-green">arrays</span>
+            <span class="tag tag-green">functions</span>
+            <span class="tag tag-green">grades</span>
+            <span class="tag tag-green">averages</span>
+            <span class="tag tag-green">reports</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-label">Must-Know Tasks</div>
+
+          <ul class="fn-list">
+            <li><span class="check">✓</span>Create <code>struct Student</code></li>
+            <li><span class="check">✓</span>Store names and scores</li>
+            <li><span class="check">✓</span>Calculate totals and averages</li>
+            <li><span class="check">✓</span>Assign letter grades automatically</li>
+            <li><span class="check">✓</span>Generate formatted reports</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- TOPIC 3 -->
+    <div id="t2" class="topic">
+
+      <div class="hero">
+        <div class="hero-label">Topic 3 • File Handling</div>
+        <div class="hero-title">Employee Management System</div>
+        <div class="hero-desc">
+          Build systems that store employee records permanently using binary files and structures.
+        </div>
+
+        <!-- ========================================= -->
+        <!-- TOPIC 3 CODE -->
+        <!-- ========================================= -->
+
+        <div class="code-section">
+
+          <div class="code-header">
+            <span>📄 employee_management.c</span>
+            <button class="copy-btn" onclick="copyCode('code3')">Copy Source</button>
+          </div>
+
+          <div class="code-block">
+            <pre><code id="code3">
+<span class="comment">// Employee Management System</span>
+
+<span class="keyword">#include</span> &lt;stdio.h&gt;
+
+<span class="keyword">struct</span> Employee
+{
+    <span class="keyword">int</span> id;
+    <span class="keyword">char</span> name[50];
+    <span class="keyword">float</span> salary;
+};
+
+<span class="keyword">int</span> <span class="func">main</span>()
+{
+    FILE *fp;
+
+    <span class="keyword">struct</span> Employee emp;
+
+    fp = fopen(<span class="string">"employee.dat"</span>, <span class="string">"ab"</span>);
+
+    <span class="keyword">if</span>(fp == NULL)
+    {
+        printf(<span class="string">"File could not open!\n"</span>);
+        <span class="keyword">return</span> <span class="num">1</span>;
+    }
+
+    printf(<span class="string">"Enter Employee ID: "</span>);
+    scanf(<span class="string">"%d"</span>, &amp;emp.id);
+
+    printf(<span class="string">"Enter Employee Name: "</span>);
+    scanf(<span class="string">"%s"</span>, emp.name);
+
+    printf(<span class="string">"Enter Salary: "</span>);
+    scanf(<span class="string">"%f"</span>, &amp;emp.salary);
+
+    fwrite(&amp;emp, sizeof(emp), <span class="num">1</span>, fp);
+
+    printf(<span class="string">"Employee saved successfully!\n"</span>);
+
+    fclose(fp);
+
+    <span class="keyword">return</span> <span class="num">0</span>;
+}
+</code></pre>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="grid2">
+
+        <div class="card">
+          <div class="card-label">Important Functions</div>
+
+          <ul class="fn-list">
+            <li><span class="check">✓</span><code>fopen()</code></li>
+            <li><span class="check">✓</span><code>fclose()</code></li>
+            <li><span class="check">✓</span><code>fwrite()</code></li>
+            <li><span class="check">✓</span><code>fread()</code></li>
+            <li><span class="check">✓</span><code>fseek()</code></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-label">Exam Requirements</div>
+
+          <ul class="fn-list">
+            <li><span class="check">✓</span>Add new employees</li>
+            <li><span class="check">✓</span>Search employee records</li>
+            <li><span class="check">✓</span>Update records</li>
+            <li><span class="check">✓</span>Delete records safely</li>
+            <li><span class="check">✓</span>Handle missing files correctly</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- TOPIC 4 -->
+    <div id="t3" class="topic">
+
+      <div class="hero">
+        <div class="hero-label">Topic 4 • Validation & Pointers</div>
+        <div class="hero-title">Banking System</div>
+        <div class="hero-desc">
+          Create secure transaction systems using pointers, validation, loops, and structures.
+        </div>
+
+        <!-- ========================================= -->
+        <!-- TOPIC 4 CODE -->
+        <!-- ========================================= -->
+
+        <div class="code-section">
+
+          <div class="code-header">
+            <span>📄 banking_system.c</span>
+            <button class="copy-btn" onclick="copyCode('code4')">Copy Source</button>
+          </div>
+
+          <div class="code-block">
+            <pre><code id="code4">
+<span class="comment">// Banking System</span>
+
+<span class="keyword">#include</span> &lt;stdio.h&gt;
+
+<span class="keyword">struct</span> Account
+{
+    <span class="keyword">char</span> name[50];
+    <span class="keyword">float</span> balance;
+};
+
+<span class="keyword">void</span> <span class="func">deposit</span>(<span class="keyword">struct</span> Account *acc, <span class="keyword">float</span> amount)
+{
+    acc-&gt;balance += amount;
+}
+
+<span class="keyword">void</span> <span class="func">withdraw</span>(<span class="keyword">struct</span> Account *acc, <span class="keyword">float</span> amount)
+{
+    <span class="keyword">if</span>(amount &gt; acc-&gt;balance)
+    {
+        printf(<span class="string">"Insufficient balance!\n"</span>);
+    }
+    <span class="keyword">else</span>
+    {
+        acc-&gt;balance -= amount;
+        printf(<span class="string">"Withdrawal successful!\n"</span>);
+    }
+}
+
+<span class="keyword">int</span> <span class="func">main</span>()
+{
+    <span class="keyword">struct</span> Account acc = {<span class="string">"John"</span>, <span class="num">1000</span>};
+
+    deposit(&amp;acc, <span class="num">500</span>);
+    withdraw(&amp;acc, <span class="num">200</span>);
+
+    printf(<span class="string">"Current Balance: %.2f\n"</span>, acc.balance);
+
+    <span class="keyword">return</span> <span class="num">0</span>;
+}
+</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid2">
+
+        <div class="card">
+          <div class="card-label">Core Areas</div>
+
+          <div class="tag-list">
+            <span class="tag tag-purple">pointers</span>
+            <span class="tag tag-purple">structures</span>
+            <span class="tag tag-purple">menus</span>
+            <span class="tag tag-purple">validation</span>
+            <span class="tag tag-purple">transactions</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-label">Critical Banking Checks</div>
+
+          <ul class="fn-list">
+            <li><span class="check">✓</span>Reject negative deposits</li>
+            <li><span class="check">✓</span>Prevent overdrafts</li>
+            <li><span class="check">✓</span>Update balances safely</li>
+            <li><span class="check">✓</span>Modify data via pointers</li>
+            <li><span class="check">✓</span>Display account information</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- TOPIC 5 -->
+    <div id="t4" class="topic">
+
+      <div class="hero">
+        <div class="hero-label">Topic 5 • Advanced Functions</div>
+        <div class="hero-title">Functions and Pointers</div>
+        <div class="hero-desc">
+          Master recursion, string manipulation, memory handling, and pointer operations.
+        </div>
+        <!-- ========================================= -->
+        <!-- TOPIC 5 CODE -->
+        <!-- ========================================= -->
+
+        <div class="code-section">
+
+          <div class="code-header">
+            <span>📄 functions_and_pointers.c</span>
+            <button class="copy-btn" onclick="copyCode('code5')">Copy Source</button>
+          </div>
+
+          <div class="code-block">
+            <pre><code id="code5">
+<span class="comment">// Functions and Pointers</span>
+
+<span class="keyword">#include</span> &lt;stdio.h&gt;
+<span class="keyword">#include</span> &lt;string.h&gt;
+
+<span class="keyword">int</span> <span class="func">factorial</span>(<span class="keyword">int</span> n)
+{
+    <span class="keyword">if</span>(n == <span class="num">0</span>)
+        <span class="keyword">return</span> <span class="num">1</span>;
+
+    <span class="keyword">return</span> n * factorial(n - <span class="num">1</span>);
+}
+
+<span class="keyword">void</span> <span class="func">swap</span>(<span class="keyword">int</span> *a, <span class="keyword">int</span> *b)
+{
+    <span class="keyword">int</span> temp;
+
+    temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+<span class="keyword">int</span> <span class="func">main</span>()
+{
+    <span class="keyword">int</span> x = <span class="num">10</span>;
+    <span class="keyword">int</span> y = <span class="num">20</span>;
+
+    printf(<span class="string">"Before Swap: %d %d\n"</span>, x, y);
+
+    swap(&amp;x, &amp;y);
+
+    printf(<span class="string">"After Swap: %d %d\n"</span>, x, y);
+
+    printf(<span class="string">"Factorial of 5 = %d\n"</span>, factorial(<span class="num">5</span>));
+
+    <span class="keyword">return</span> <span class="num">0</span>;
+}
+</code></pre>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="grid2">
+
+        <div class="card">
+          <div class="card-label">Advanced Concepts</div>
+
+          <div class="tag-list">
+            <span class="tag tag-pink">recursion</span>
+            <span class="tag tag-pink">pointers</span>
+            <span class="tag tag-pink">strings</span>
+            <span class="tag tag-pink">palindrome</span>
+            <span class="tag tag-pink">factorial</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-label">Important Tasks</div>
+
+          <ul class="fn-list">
+            <li><span class="check">✓</span>Recursive factorial programs</li>
+            <li><span class="check">✓</span>Swap variables using pointers</li>
+            <li><span class="check">✓</span>Reverse strings manually</li>
+            <li><span class="check">✓</span>Check palindromes</li>
+            <li><span class="check">✓</span>Understand memory addresses</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="footer">
+      Designed for modern C programming practical examination preparation • Interactive • Responsive • Modern UI
+    </div>
+
+  </div>
+
+  <script src="./js/script.js"></script>
+
+</body>
+
+</html>
