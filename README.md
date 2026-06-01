@@ -214,7 +214,7 @@ This guide is designed specifically for:
 1. Download or clone the project.
 
 ```bash
-git clone https://github.com/your-username/c-programming-revision-guide.git
+git clone https://github.com/revominds/c-programming-revision-guide.git
 ```
 
 1. Open the project folder.
